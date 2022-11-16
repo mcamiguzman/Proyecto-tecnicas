@@ -1,4 +1,6 @@
 #include "proyect.h"
+#include "Caminar.h"
+#include "Guardar.h"
 // FALTAN CARTAS
 
 void menu( Pers *p, Enem *e )
@@ -136,7 +138,7 @@ void jugar( Pers *p, Enem *e )
         {
           case 1: 
               system( "cls" );
-             
+	      Caminar(/* llama a dureza del personaje que selecciono el jugador*/);
           break;
 
           case 2:
@@ -146,12 +148,13 @@ void jugar( Pers *p, Enem *e )
           break;
 
           case 3:
-          	  imprimeEnem( e );
+          	  imprimeEnem( e ); //No creo que sea asi
           break;
 
           case 4:
               system( "cls" );
-              printf( "Guardar\n" );
+              printf( "Guardar\n" );//No creo
+	      Guardar();
           break;
 
           case 5:
@@ -165,5 +168,5 @@ void jugar( Pers *p, Enem *e )
           
         }
     }while( opc1 != 5);
-  printf( "\n\nEstas siendo redireccionado al menu principal\n\n" );
+  printf( "\n\nEstas siendo redireccionado al menu principal\n\n" ); //Como vuelves a llamar al menu?
 }
